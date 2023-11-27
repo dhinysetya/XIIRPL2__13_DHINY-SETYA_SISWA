@@ -1,4 +1,4 @@
-const User = require('../models/User')
+const User = require('../models/Siswa')
 
 module.exports = {
     // get all users
@@ -55,7 +55,7 @@ module.exports = {
         },
         update: async (req, res) => {
             try {
-                const user = await User.findByIdAndUpdate(req.params.id, req.bod, {
+                const user = await User.findByIdAndUpdate(req.params.id, req.body, {
                     new: true,
                     runValidators: true
                 })
